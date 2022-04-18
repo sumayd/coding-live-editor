@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+    <div class="output">
+        <div class="output-buttons d-flex justify-content-end align-items-end">
+            <div class="dropdown show">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle history" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">History</button>
+                <div id="history-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    
+                </div>
+            </div>
+            <button id="saveBtn" type="button" class="btn btn-outline-success save ms-2">Save</button>
+            
+        </div>
+        <div class="output-container border">
+            <div id="result" class="result">
+                <iframe id="result-window" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="editor-container">
+        <div class="editor-header border d-flex justify-content-end px-3">
+            <button id="minimize" class="minimize">Minimize</button>
+            <span>|</span>
+            <button id="runBtn" class="ms-1">Run</button>
+        </div>
+        <div class="editor-boxs d-flex justify-content-between">
+            <div class="box js-editor">
+                <h2 class="js-editor-title">
+                    <svg viewBox="0 0 15 15" class="file-type-icon" id="icon-file-js">
+                        <rect fill="#FCD000" width="15" height="15" rx="4"></rect>
+                        <path d="M6.554 3.705c0 .267-.19.496-.452.543-1.2.217-2.12 1.61-2.12 3.275 0 1.665.92 3.057 2.12 3.274a.554.554 0 0 1-.205 1.087c-1.733-.322-3.022-2.175-3.022-4.361 0-2.187 1.289-4.04 3.022-4.362a.554.554 0 0 1 .657.544zm1.892 0c0-.347.316-.607.657-.544 1.733.322 3.022 2.175 3.022 4.362 0 2.186-1.289 4.04-3.022 4.361a.554.554 0 0 1-.205-1.087c1.2-.217 2.12-1.61 2.12-3.274 0-1.665-.92-3.058-2.12-3.275a.551.551 0 0 1-.452-.543z" fill="#282828"></path>
+                    </svg>
+                    <sapn>JS</sapn>
+                </h2>
+                <textarea id="jsCode" placeholder="JS Code" ></textarea>
+            </div>
+            <div class="box html-editor">
+                <h2 class="html-editor-title">
+                    <svg viewBox="0 0 15 15" class="file-type-icon" id="icon-file-html">
+                        <rect fill="#FF3C41" width="15" height="15" rx="4"></rect>
+                        <path d="M10.97 2.29a.563.563 0 0 0-.495-.29.572.572 0 0 0-.488.277l-5.905 9.86a.565.565 0 0 0-.007.574c.102.18.287.289.495.289a.572.572 0 0 0 .488-.277l5.905-9.86a.565.565 0 0 0 .007-.574" fill="#28282B"></path>
+                    </svg>
+                    <span>HTML</span>
+                </h2>
+                <textarea id="htmlCode" placeholder="Html Code" ></textarea>
+            </div>
+            <div class="box css-editor">
+                <h2 class="css-editor-title">
+                    <svg viewBox="0 0 15 15" class="file-type-icon" id="icon-file-css">
+                        <rect fill="#0EBEFF" width="15" height="15" rx="4"></rect><path d="M8 8.366l1.845 1.065a.507.507 0 0 0 .686-.181.507.507 0 0 0-.186-.685L8.5 7.5l1.845-1.065a.507.507 0 0 0 .186-.685.507.507 0 0 0-.686-.181L8 6.634v-2.13A.507.507 0 0 0 7.5 4c-.268 0-.5.225-.5.503v2.131L5.155 5.569a.507.507 0 0 0-.686.181.507.507 0 0 0 .186.685L6.5 7.5 4.655 8.565a.507.507 0 0 0-.186.685c.134.232.445.32.686.181L7 8.366v2.13c0 .271.224.504.5.504.268 0 .5-.225.5-.503V8.366z" fill="#282828"></path>
+                        </svg>
+                    <span>CSS</span>
+                </h2>
+                <textarea id="cssCode" placeholder="CSS Code" ></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
